@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import React, { createContext, FC, useContext, useMemo } from 'react';
 import {
   CookieConsentHookState,
