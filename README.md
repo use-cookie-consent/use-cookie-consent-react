@@ -9,7 +9,7 @@
 
 ## Description
 
-This package provides a wrapper around [`@use-cookie-consent/core`](https://github.com/use-cookie-consent/use-cookie-consent-core) package to provide best experience for React applications. Namely, it provides you React context, which provides all the functionality of [core](https://github.com/use-cookie-consent/use-cookie-consent-core) package but with reactive updates.
+This package provides a wrapper around [`@use-cookie-consent/core`](https://github.com/use-cookie-consent/use-cookie-consent-core) package to provide best experience for React applications. Namely, it provides a React context, which provides all the functionality of [core](https://github.com/use-cookie-consent/use-cookie-consent-core) package but with reactive updates.
 
 ## Installation
 
