@@ -84,7 +84,7 @@ const CookiesPreview = () => {
 };
 ```
 
-Thanks to @pixelass for prividing the examples you see above.
+Thanks to [@pixelass](https://github.com/pixelass) for prividing the examples you see above.
 
 ## Contributors
 
