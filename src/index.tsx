@@ -1,80 +1,76 @@
-import React, { createContext, FC, useContext, useMemo } from "react";
-import { CookieConsentHookState, useCookieConsent } from "use-cookie-consent";
+/* eslint-disable @typescript-eslint/no-empty-function */
+import React, { createContext, FC, useContext, useMemo } from 'react';
+import {
+  CookieConsentHookState,
+  CookieConsentOptions,
+  useCookieConsent,
+} from '@use-cookie-consent/core';
 
-export const CookieConsentContext = createContext<CookieConsentHookState>({
+export const createCookieConsentContext = () =>
+  createContext<CookieConsentHookState>({
     consent: {},
-    acceptCookies() {
-        /**/
-    },
-    declineAllCookies() {
-        /**/
-    },
-    acceptAllCookies() {
-        /**/
-    },
-    didAcceptAll() {
-        return false;
-    },
-    didDeclineAll() {
-        return false;
-    },
+    acceptCookies: () => {},
+    declineAllCookies: () => {},
+    acceptAllCookies: () => {},
+    didAcceptAll: () => false,
+    didDeclineAll: () => false,
     cookies: {
-        set() {
-            return undefined;
-        },
-        get() {
-            return "";
-        },
-        getAll() {
-            return {};
-        },
-        getJSON() {
-            /**/
-        },
-        getAllJSON() {
-            return {};
-        },
-        remove() {
-            /**/
-        },
+      set: () => undefined,
+      get: () => '',
+      getAll: () => ({}),
+      getJSON: () => {},
+      getAllJSON: () => ({}),
+      remove: () => {},
     },
-});
+  });
 
-export const CookieConsentProvider: FC = ({ children }) => {
-    const {
-        consent,
-        acceptAllCookies,
-        declineAllCookies,
-        acceptCookies,
-        didAcceptAll,
-        didDeclineAll,
-        cookies,
-    } = useCookieConsent();
+export const CookieConsentContext = createCookieConsentContext();
 
-    const context = useMemo(
-        () => ({
-            consent,
-            acceptAllCookies,
-            declineAllCookies,
-            acceptCookies,
-            didAcceptAll,
-            didDeclineAll,
-            cookies,
-        }),
-        [
-            consent,
-            acceptAllCookies,
-            declineAllCookies,
-            acceptCookies,
-            didAcceptAll,
-            didDeclineAll,
-            cookies,
-        ]
-    );
+export interface CookieConsentProviderProps {
+  useCookieConsentHooksOptions?: CookieConsentOptions;
+}
 
-    return (
-        <CookieConsentContext.Provider value={context} > {children} < /CookieConsentContext.Provider>
-            );
+export const CookieConsentProvider: FC<CookieConsentProviderProps> = ({
+  useCookieConsentHooksOptions,
+  children,
+}) => {
+  CookieConsentContext.Consumer;
+  const {
+    consent,
+    acceptAllCookies,
+    declineAllCookies,
+    acceptCookies,
+    didAcceptAll,
+    didDeclineAll,
+    cookies,
+  } = useCookieConsent(useCookieConsentHooksOptions);
+
+  const context = useMemo(
+    () => ({
+      consent,
+      acceptAllCookies,
+      declineAllCookies,
+      acceptCookies,
+      didAcceptAll,
+      didDeclineAll,
+      cookies,
+    }),
+    [
+      consent,
+      acceptAllCookies,
+      declineAllCookies,
+      acceptCookies,
+      didAcceptAll,
+      didDeclineAll,
+      cookies,
+    ],
+  );
+
+  return (
+    <CookieConsentContext.Provider value={context}>
+      {children}
+    </CookieConsentContext.Provider>
+  );
 };
 
 export const useCookieConsentContext = () => useContext(CookieConsentContext);

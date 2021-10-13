@@ -1,22 +1,24 @@
-import peerDepsExternal from "rollup-plugin-peer-deps-external";
-import resolve from "@rollup/plugin-node-resolve";
-import commonjs from "@rollup/plugin-commonjs";
-import typescript from "rollup-plugin-typescript2";
+import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
+import typescript from 'rollup-plugin-typescript2';
+import { uglify } from 'rollup-plugin-uglify';
 
-const packageJson = require("./package.json");
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const packageJson = require('./package.json');
 
 export default {
-  input: "src/index.ts",
+  input: 'src/index.tsx',
   output: [
     {
       file: packageJson.main,
-      format: "cjs",
-      sourcemap: true,
+      format: 'cjs',
+      sourcemap: process.env.BUILD !== 'production',
     },
     {
       file: packageJson.module,
-      format: "esm",
-      sourcemap: true,
+      format: 'esm',
+      sourcemap: process.env.BUILD !== 'production',
     },
   ],
   plugins: [
@@ -24,5 +26,6 @@ export default {
     resolve(),
     commonjs(),
     typescript({ useTsconfigDeclarationDir: true }),
+    uglify(),
   ],
 };
