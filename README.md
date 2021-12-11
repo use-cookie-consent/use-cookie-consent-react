@@ -7,6 +7,11 @@
 ![Lines of code](https://img.shields.io/tokei/lines/github/use-cookie-consent/use-cookie-consent-react)
 [![License](https://img.shields.io/npm/l/@use-cookie-consent/react)](https://github.com/use-cookie-consent/use-cookie-consent-react/blob/main/LICENSE)
 
+> Headless state management for GDPR cookie consent
+
+- **Headless** - bring your own styles, we will provide the logic.
+- **Hook-based** - extremely intuitive for React developers.
+
 ## Description
 
 This package provides a wrapper around [`@use-cookie-consent/core`](https://github.com/use-cookie-consent/use-cookie-consent-core) package to provide best experience for React applications. Namely, it provides a React context, which provides all the functionality of [core](https://github.com/use-cookie-consent/use-cookie-consent-core) package but with reactive updates.
