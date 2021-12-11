@@ -11,6 +11,7 @@
 
 - **Headless** - bring your own styles, we will provide the logic.
 - **Hook-based** - extremely intuitive for React developers.
+- **React Context support** - wrap your app in a provider and synchronse UI updates across the app.
 
 ## Description
 
