@@ -1,6 +1,6 @@
 {
   "name": "@use-cookie-consent/react",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "useCookieConsent hook for React apps",
   "main": "build/index.js",
   "module": "build/index.es.js",
@@ -79,7 +79,7 @@
     "typescript": "^4.4.3"
   },
   "dependencies": {
-    "@use-cookie-consent/core": "^0.2.0"
+    "@use-cookie-consent/core": "^0.3.2"
   },
   "husky": {
     "hooks": {
