@@ -98,6 +98,10 @@ Thanks to [@pixelass](https://github.com/pixelass) for prividing the examples yo
 - [Antoni Silvestrovic](https://github.com/bring-shrubbery)
 - [Gregor Adams](https://github.com/pixelass)
 
+## Discussions and Questions
+
+For non-issues please consider joining our Discord [here](https://discord.gg/pa8epvzJbb)!
+
 ## License
 
 [MIT](https://github.com/use-cookie-consent/use-cookie-consent-react/blob/main/LICENSE)
