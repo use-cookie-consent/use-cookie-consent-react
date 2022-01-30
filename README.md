@@ -7,6 +7,8 @@
 [![gzipped size](https://img.badgesize.io/https:/unpkg.com/@use-cookie-consent/react@latest/build/index.es.js?label=gzipped&compression=gzip&style=flat-square)](https://unpkg.com/@use-cookie-consent/react@latest/build/index.es.js)
 [![License](https://img.shields.io/npm/l/@use-cookie-consent/react)](https://github.com/use-cookie-consent/use-cookie-consent-react/blob/main/LICENSE)
 
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/bring.shrubbery)
+
 > Headless state management for GDPR cookie consent
 
 - **Headless** - bring your own styles, we will provide the logic.
