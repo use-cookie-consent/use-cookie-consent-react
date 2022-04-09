@@ -80,7 +80,7 @@
     "typescript": "^4.4.3"
   },
   "dependencies": {
-    "@use-cookie-consent/core": "^0.3.2"
+    "@use-cookie-consent/core": "^0.3.6"
   },
   "husky": {
     "hooks": {

@@ -2781,10 +2781,10 @@
     "@typescript-eslint/types" "5.0.0"
     eslint-visitor-keys "^3.0.0"
 
-"@use-cookie-consent/core@^0.3.2":
-  version "0.3.2"
-  resolved "https://registry.npmjs.org/@use-cookie-consent/core/-/core-0.3.2.tgz#04d6db81dc8dff0e3dcb0854bda8bb943581e0f0"
-  integrity sha512-yHx5XZYmQsURHMlBPhJL+VwB0OzuD+1S2vji2MBD7jUBWeC8Cz46BbSgiG6Ei6H2huvFFsFJgjvSYVLsOLUc9g==
+"@use-cookie-consent/core@^0.3.6":
+  version "0.3.6"
+  resolved "https://registry.npmjs.org/@use-cookie-consent/core/-/core-0.3.6.tgz#5de64fc57b33cab9bb86ed71a85e926b210c77bb"
+  integrity sha512-fFDqPzJIr83Z2pJ5rCsi996BB+tYhdkNnyNzA9Dxp8Jpxn/QJyJ3TiIIAxqxutkEHc3IkcWBGWf7CKwwYRv5gw==
   dependencies:
     js-cookie "^2"
 
