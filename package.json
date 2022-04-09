@@ -39,8 +39,8 @@
   },
   "homepage": "https://github.com/use-cookie-consent/use-cookie-consent-react#readme",
   "peerDependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react": "^17.0.0 || ^16.8.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^16.8.0 || ^18.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
