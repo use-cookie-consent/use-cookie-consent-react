@@ -1,5 +1,11 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import React, { createContext, FC, useContext, useMemo } from 'react';
+import React, {
+  createContext,
+  FC,
+  ReactNode,
+  useContext,
+  useMemo,
+} from 'react';
 import {
   CookieConsentHookState,
   CookieConsentOptions,
@@ -27,6 +33,7 @@ export const createCookieConsentContext = () =>
 export const CookieConsentContext = createCookieConsentContext();
 
 export interface CookieConsentProviderProps {
+  children?: ReactNode;
   useCookieConsentHooksOptions?: CookieConsentOptions;
 }
 
