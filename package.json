@@ -1,6 +1,6 @@
 {
   "name": "@use-cookie-consent/react",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "description": "useCookieConsent hook for React apps",
   "main": "build/index.js",
   "module": "build/index.es.js",
