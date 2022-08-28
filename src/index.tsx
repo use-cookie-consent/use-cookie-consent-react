@@ -30,10 +30,9 @@ export interface CookieConsentProviderProps {
   useCookieConsentHooksOptions?: CookieConsentOptions;
 }
 
-export const CookieConsentProvider: FC<CookieConsentProviderProps> = ({
-  useCookieConsentHooksOptions,
-  children,
-}) => {
+export const CookieConsentProvider: FC<
+  React.PropsWithChildren<CookieConsentProviderProps>
+> = ({ useCookieConsentHooksOptions, children }) => {
   CookieConsentContext.Consumer;
   const {
     consent,
