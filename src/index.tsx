@@ -2,7 +2,7 @@
 import React, { createContext, FC, useContext, useMemo } from 'react';
 import {
   CookieConsentHookState,
-  CookieConsentOptions,
+  CookieConsentHookOptions,
   useCookieConsent,
 } from '@use-cookie-consent/core';
 
@@ -27,7 +27,7 @@ export const createCookieConsentContext = () =>
 export const CookieConsentContext = createCookieConsentContext();
 
 export interface CookieConsentProviderProps {
-  useCookieConsentHooksOptions?: CookieConsentOptions;
+  useCookieConsentHooksOptions?: CookieConsentHookOptions;
 }
 
 export const CookieConsentProvider: FC<
@@ -41,7 +41,6 @@ export const CookieConsentProvider: FC<
     acceptCookies,
     didAcceptAll,
     didDeclineAll,
-    cookies,
   } = useCookieConsent(useCookieConsentHooksOptions);
 
   const context = useMemo(
@@ -52,7 +51,6 @@ export const CookieConsentProvider: FC<
       acceptCookies,
       didAcceptAll,
       didDeclineAll,
-      cookies,
     }),
     [
       consent,
@@ -61,7 +59,6 @@ export const CookieConsentProvider: FC<
       acceptCookies,
       didAcceptAll,
       didDeclineAll,
-      cookies,
     ],
   );
 
